@@ -34,6 +34,20 @@ class CommodityList extends React.Component {
         }
     }
 
+    componentDidMount() {
+        fetch("http://localhost:8080/commodity")
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+            })
+            .then(commodities => {
+                this.setState({
+                    commodities: commodities
+                })
+            })
+    }
+
     render() {
         return (
             <div>
