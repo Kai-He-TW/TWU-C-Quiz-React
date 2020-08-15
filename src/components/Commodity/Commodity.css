@@ -1,0 +1,39 @@
+.commodity {
+    margin: 20px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    border: 1px solid gray;
+    width: fit-content;
+    height: fit-content;
+}
+
+.commodity-img {
+    min-width: 150px;
+    max-height: 200px;
+}
+
+.commodity-text {
+    text-align: left;
+}
+
+.commodity-text-name {
+    font-weight: bold;;
+}
+
+.commodity-text-unit {
+    color: gray;
+}
+
+.commodity-but-container {
+    text-align: right;
+}
+
+.commodity-but {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    outline: none;
+}

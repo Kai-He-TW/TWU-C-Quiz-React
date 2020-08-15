@@ -1,0 +1,9 @@
+.commodity-list {
+    padding: 20px;
+}
+
+.commodity-list-cards {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+}

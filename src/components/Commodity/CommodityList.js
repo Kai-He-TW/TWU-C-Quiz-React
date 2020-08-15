@@ -1,6 +1,7 @@
 import React from "react";
 import Commodity from "./Commodity";
 import {get} from '../../commons/FetcUtlils'
+import './CommodityList.css'
 
 class CommodityList extends React.Component {
     constructor(props) {
@@ -22,8 +23,10 @@ class CommodityList extends React.Component {
 
     render() {
         return (
-            <div>
-                {this.state.commodities.map(commodity => <Commodity key={commodity.name} commodity={commodity}/>)}
+            <div className='commodity-list'>
+                <div className='commodity-list-cards'>
+                    {this.state.commodities.map(commodity => <Commodity key={commodity.name} commodity={commodity}/>)}
+                </div>
             </div>
         );
     }
