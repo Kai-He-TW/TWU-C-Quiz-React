@@ -50,7 +50,11 @@ class Commodity extends React.Component {
                         className='commodity-text-unit'>{this.props.commodity.price}元/{this.props.commodity.unit}</span>
                 </div>
                 <div className='commodity-but-container'>
-                    <button className='commodity-but' onClick={this.handlerAddOrder}>+</button>
+                    <button
+                        className={this.state.isSubmitOrder ? 'commodity-but commodity-but-disable' : 'commodity-but'}
+                        onClick={this.handlerAddOrder}
+                        disabled={this.state.isSubmitOrder}>+
+                    </button>
                 </div>
             </div>
         );
