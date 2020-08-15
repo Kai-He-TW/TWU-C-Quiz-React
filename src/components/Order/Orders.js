@@ -38,7 +38,7 @@ class Orders extends React.Component {
 
     renderOrders() {
         if (this.state.orders.length === 0) {
-            return <h3>暂无订单，返回<Link exact to='/'>商城页面</Link>继续购买</h3>
+            return <h3>暂无订单，返回<Link to='/'>商城页面</Link>继续购买</h3>
         } else {
             return <table className='order-table' cellSpacing="0" cellPadding="0">
                 <thead>
