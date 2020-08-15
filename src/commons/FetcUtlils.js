@@ -18,11 +18,7 @@ async function get(url) {
         throw new Error()
     }
 
-    let result = await response.json();
-
-    console.log(result)
-
-    return result
+    return await response.json()
 }
 
 export {
