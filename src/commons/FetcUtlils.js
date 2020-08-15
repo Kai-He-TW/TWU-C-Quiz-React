@@ -21,6 +21,19 @@ async function get(url) {
     return await response.json()
 }
 
+
+async function deleteFetch(url) {
+    const optional = {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+    }
+
+    return await fetch(`http://localhost:8080${url}`, optional)
+}
+
 export {
-    post, get
+    post, get, deleteFetch
 }

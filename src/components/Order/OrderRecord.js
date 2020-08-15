@@ -22,7 +22,9 @@ class OrderRecord extends React.Component {
                     {this.props.order.unit}
                 </td>
                 <td>
-                    <button className='order-record-but'>删 除</button>
+                    <button className='order-record-but'
+                            onClick={() => this.props.handlerDeleteOrder(this.props.index, this.props.order.id)}>删 除
+                    </button>
                 </td>
             </tr>
         );
@@ -30,7 +32,9 @@ class OrderRecord extends React.Component {
 }
 
 OrderRecord.propTypes = {
-    order: PropTypes.object.isRequired
+    index: PropTypes.number.isRequired,
+    order: PropTypes.object.isRequired,
+    handlerDeleteOrder: PropTypes.func.isRequired
 }
 
 export default OrderRecord

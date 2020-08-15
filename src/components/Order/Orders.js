@@ -1,6 +1,6 @@
 import React from "react";
 import OrderRecord from "./OrderRecord";
-import {get} from "../../commons/FetcUtlils";
+import {deleteFetch, get} from "../../commons/FetcUtlils";
 import './Order.css'
 
 class Orders extends React.Component {
@@ -19,6 +19,18 @@ class Orders extends React.Component {
         })
     }
 
+    handlerDeleteOrder = (index, orderId) => {
+        deleteFetch(`/order/${orderId}`).then(response => {
+            if (response.ok) {
+                let orders = this.state.orders
+                delete orders[index]
+                this.setState({
+                    orders: orders
+                })
+            }
+        })
+    }
+
     render() {
         return (
             <div className='order'>
@@ -33,7 +45,10 @@ class Orders extends React.Component {
                     </tr>
                     </thead>
                     <tbody>
-                    {this.state.orders.map((order, index) => <OrderRecord key={index} order={order}/>)}
+                    {this.state.orders.map((order, index) => <OrderRecord key={index}
+                                                                          order={order}
+                                                                          index={index}
+                                                                          handlerDeleteOrder={this.handlerDeleteOrder}/>)}
                     </tbody>
                 </table>
             </div>
