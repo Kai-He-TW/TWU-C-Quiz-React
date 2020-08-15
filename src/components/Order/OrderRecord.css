@@ -1,0 +1,8 @@
+.order-record-but {
+    color: red;
+    border: 1px solid gray;
+    border-radius: 10%;
+    width: 50px;
+    padding: 5px;
+    outline: none;
+}

@@ -1,0 +1,22 @@
+.order {
+    margin: 20px;
+    padding: 40px;
+    background-color: white;
+}
+
+.order-table {
+    width: 100%;
+    text-align: left;
+}
+
+th, td {
+    padding: 10px;
+}
+
+.order-table-tr {
+    height: 50px;
+}
+
+.order-table-header th {
+    background-color: #FAFAFA;
+}

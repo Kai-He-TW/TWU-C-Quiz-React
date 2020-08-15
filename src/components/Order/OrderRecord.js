@@ -1,15 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types"
+import './OrderRecord.css'
 
 class OrderRecord extends React.Component {
     render() {
         return (
-            <div>
-                {this.props.order.name}
-                {this.props.order.price}
-                {this.props.order.size}
-                {this.props.order.unit}
-            </div>
+            <tr>
+                <td>
+                    {this.props.order.name}
+                </td>
+
+                <td>
+                    {this.props.order.price}
+                </td>
+
+                <td>
+                    {this.props.order.size}
+                </td>
+
+                <td>
+                    {this.props.order.unit}
+                </td>
+                <td>
+                    <button className='order-record-but'>删 除</button>
+                </td>
+            </tr>
         );
     }
 }
