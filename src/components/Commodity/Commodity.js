@@ -51,7 +51,7 @@ class Commodity extends React.Component {
                 </div>
                 <div className='commodity-but-container'>
                     <button
-                        className={this.state.isSubmitOrder ? 'commodity-but commodity-but-disable' : 'commodity-but'}
+                        className={this.state.isSubmitOrder ? 'commodity-but-disable' : 'commodity-but'}
                         onClick={this.handlerAddOrder}
                         disabled={this.state.isSubmitOrder}>+
                     </button>
