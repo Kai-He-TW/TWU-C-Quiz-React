@@ -1,37 +1,21 @@
 import React from "react";
 import OrderRecord from "./OrderRecord";
+import {get} from "../../commons/FetcUtlils";
 
 class Orders extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            orders: [
-                {
-                    name: "可乐1",
-                    price: 15.6,
-                    size: 2,
-                    unit: "瓶"
-                },
-                {
-                    name: "可乐2",
-                    price: 15.6,
-                    size: 2,
-                    unit: "瓶"
-                },
-                {
-                    name: "可乐3",
-                    price: 15.6,
-                    size: 2,
-                    unit: "瓶"
-                },
-                {
-                    name: "可乐4",
-                    price: 15.6,
-                    size: 2,
-                    unit: "瓶"
-                },
-            ]
+            orders: []
         }
+    }
+
+    componentDidMount() {
+        get("/order").then(orders => {
+            this.setState({
+                orders: orders
+            })
+        })
     }
 
     render() {
