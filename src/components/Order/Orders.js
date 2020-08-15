@@ -28,7 +28,11 @@ class Orders extends React.Component {
                 this.setState({
                     orders: orders
                 })
+            } else {
+                alert("订单删除失败，请稍后再试")
             }
+        }).catch(() => {
+            alert("订单删除失败，请稍后再试")
         })
     }
 
