@@ -1,0 +1,19 @@
+.header {
+    background-color: black;
+    text-align: left;
+    height: 50px;
+}
+
+.header-nav {
+    display: inline-block;
+    color: white;
+    margin: 0 10px;
+    padding: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    height: 40px;
+}
+
+.header-nav-icon {
+    margin: 0 5px;
+}
