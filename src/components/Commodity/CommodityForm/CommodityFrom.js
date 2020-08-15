@@ -12,7 +12,8 @@ class CommodityForm extends React.Component {
                 price: '',
                 unit: '',
                 imageUrl: ''
-            }
+            },
+            isAbleSubmit: false
         }
 
     }
@@ -26,6 +27,11 @@ class CommodityForm extends React.Component {
         }
 
         state.commodity[target.id] = target.value
+
+        if (state.commodity.name && state.commodity.price && state.commodity.unit && state.commodity.imageUrl) {
+            state.isAbleSubmit = true
+        }
+
         this.setState(state)
     }
 
@@ -86,7 +92,11 @@ class CommodityForm extends React.Component {
                     </div>
 
                     <div>
-                        <button className='commodity-form-but' typeof='submit' onClick={this.handleSubmit}>提交</button>
+                        <button
+                            className={this.state.isAbleSubmit ? 'commodity-form-but' : 'commodity-form-but-disable'}
+                            typeof='submit' onClick={this.handleSubmit}
+                            disabled={!this.state.isAbleSubmit}>提交
+                        </button>
                     </div>
                 </form>
             </div>
