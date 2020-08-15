@@ -6,32 +6,7 @@ class CommodityList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            commodities: [
-                {
-                    name: "可乐1",
-                    price: 12.5,
-                    unit: "瓶",
-                    image: "not-image"
-                },
-                {
-                    name: "可乐2",
-                    price: 12.5,
-                    unit: "瓶",
-                    image: "not-image"
-                },
-                {
-                    name: "可乐3",
-                    price: 12.5,
-                    unit: "瓶",
-                    image: "not-image"
-                },
-                {
-                    name: "可乐4",
-                    price: 12.5,
-                    unit: "瓶",
-                    image: "not-image"
-                }
-            ]
+            commodities: []
         }
     }
 
