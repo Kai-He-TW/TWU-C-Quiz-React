@@ -1,5 +1,6 @@
 import React from "react";
 import Commodity from "./Commodity";
+import {get} from '../../commons/FetcUtlils'
 
 class CommodityList extends React.Component {
     constructor(props) {
@@ -35,17 +36,13 @@ class CommodityList extends React.Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:8080/commodity")
-            .then(response => {
-                if (response.ok) {
-                    return response.json();
-                }
+        get('/commodity').then(commodities => {
+            console.log(commodities)
+
+            this.setState({
+                commodities: commodities
             })
-            .then(commodities => {
-                this.setState({
-                    commodities: commodities
-                })
-            })
+        })
     }
 
     render() {

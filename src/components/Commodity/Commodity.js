@@ -5,7 +5,7 @@ class Commodity extends React.Component {
     render() {
         return (
             <div>
-                <img src={this.props.commodity.image} alt={this.props.commodity.name}/>
+                <img src={this.props.commodity.imageUrl} alt={this.props.commodity.name}/>
                 <span>{this.props.commodity.name}</span>
                 <span>{this.props.commodity.price}元/{this.props.commodity.unit}</span>
             </div>
