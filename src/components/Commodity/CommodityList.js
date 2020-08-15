@@ -13,8 +13,6 @@ class CommodityList extends React.Component {
 
     componentDidMount() {
         get('/commodity').then(commodities => {
-            console.log(commodities)
-
             this.setState({
                 commodities: commodities
             })
